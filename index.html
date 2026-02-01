@@ -1,8 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8050463644735537"
-     crossorigin="anonymous"></script></head>
+<head>
+<meta charset="UTF-8">
+<title>SECURITY WARNING</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background: #0b0b0b;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #ffffff;
+    }
+
+    body {
+        overflow-y: auto;
+    }
+
+    .overlay {
+        min-height: 100vh;
+        padding: 40px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .container {
+        max-width: 900px;
+        width: 100%;
+        border: 6px solid #ff2b2b;
+        background: #000;
+        padding: 30px;
+        box-shadow: 0 0 40px rgba(255, 0, 0, 0.6);
+        text-align: center;
+    }
+
+    h1 {
+        color: #ff2b2b;
+        font-size: 42px;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 1.6;
+        margin: 16px 0;
+    }
+
+    .danger {
+        color: #ff2b2b;
+        font-weight: bold;
+    }
+
+    .big {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .lock {
+        font-size: 26px;
+        font-weight: bold;
+        margin-top: 30px;
+        color: #ff2b2b;
+    }
+
+    .fullscreen-btn {
+        margin-top: 25px;
+        padding: 14px 24px;
+        font-size: 18px;
+        font-weight: bold;
+        background: #ff2b2b;
+        color: #000;
+        border: none;
+        cursor: pointer;
+    }
+
+    .fullscreen-btn:hover {
+        background: #ff5555;
+    }
+
+    .footer {
+        margin-top: 30px;
+        font-size: 16px;
+        color: #bbbbbb;
+    }
+</style>
+</head>
+
 <body>
-  <p>The website is at https://an.unorthodox.site, not this domain!</p>
+<div class="overlay" id="page">
+    <div class="container">
+        <h1>⚠ SECURITY WARNING ⚠</h1>
+
+        <p class="big">
+            This computer was left <span class="danger">unlocked</span>.
+        </p>
+
+        <p>
+            That is <span class="danger">dangerous</span>.
+        </p>
+
+        <p>
+            When a computer is unlocked, <span class="danger">anyone</span> can walk up
+            and plug in a small USB device.
+            This can happen in <span class="danger">less than one second</span>.
+        </p>
+
+        <p>
+            A bad person could:
+            <br>• steal passwords
+            <br>• watch your screen
+            <br>• see what you type
+            <br>• turn on your camera
+            <br>• listen through your microphone
+            <br>• control your computer
+        </p>
+
+        <p>
+            They could also install <span class="danger">ransomware</span>.
+        </p>
+
+        <p>
+            Ransomware can:
+            <br>• lock your files
+            <br>• destroy important work
+            <br>• spread to <span class="danger">other computers on the network</span>
+            <br>• shut down an entire school or workplace
+        </p>
+
+        <p class="big">
+            Two seconds is all it takes.
+        </p>
+
+        <div class="lock">
+            ALWAYS LOCK YOUR COMPUTER<br><br>
+            Press <span class="danger">Windows + L</span>
+        </div>
+
+        <button class="fullscreen-btn" onclick="goFullscreen()">
+            ENTER FULL SCREEN
+        </button>
+
+        <div class="footer">
+            This is a serious security warning.<br>
+            Do not ignore it.
+        </div>
+    </div>
+</div>
+
+<script>
+function goFullscreen() {
+    const el = document.documentElement;
+    if (el.requestFullscreen) el.requestFullscreen();
+    else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
+    else if (el.msRequestFullscreen) el.msRequestFullscreen();
+}
+
+// Attempt fullscreen automatically (may be blocked by browser)
+setTimeout(goFullscreen, 500);
+</script>
 </body>
 </html>
